@@ -1,0 +1,41 @@
+insert into category (id_category, description, name)
+values
+        (1, "descripcion de la primera categoria","categoria 1"),
+        (2, "descripcion de la segunda categoria","categoria 2"),
+        (3, "descripcion de la tercera categoria","categoria 3"),
+        (4, "descripcion de la cuarta categoria","categoria 4"),
+        (5, "descripcion de la quinta categoria","categoria 5");
+insert into product (id_product, name, price, quantity, id_categoria)
+values  (1, "producto1", 12.99, 15, 1),
+        (2, "producto2", 2.99, 105, 2),
+        (3, "producto3", 1.99, 150, 3),
+        (4, "producto4", 16.50, 99, 4),
+        (5, "producto5", 4.12, 4, 1),
+        (6, "producto6", 1.50, 78, 2),
+        (7, "producto7", 0.99, 133, 3),
+        (8, "producto8", 85.99, 87, 4),
+        (9, "producto9", 12.00, 98, 1),
+        (10, "producto10", 7.99, 12, 2),
+        (11, "producto11", 8.99, 8, 3),
+        (12, "producto12", 4.99, 6, 4),
+        (99, "ultimoproducto", 99.99, 1, 5);
+insert into ecomerce.user (id_user, birth_date, email, password, username)
+values  (1,current_timestamp, "us1@email.com", "password", "username1"),
+        (2,current_timestamp, "us2@email.com", "password", "username2"),
+        (3,current_timestamp, "us3@email.com", "password", "username3"),
+        (4,current_timestamp, "us4@email.com", "password", "username4"),
+        (5,current_timestamp, "us5@email.com", "password", "username5");
+
+insert into cart_item (id_cart_item, created_date, modified_date, quantity, id_product, id_user)
+values  (1, current_timestamp, current_timestamp, 5, 1,1),
+        (2, current_timestamp, current_timestamp, 5, 1,2),
+        (3, current_timestamp, current_timestamp, 5, 3,1),
+        (4, current_timestamp, current_timestamp, 5, 4,1),
+        (5, current_timestamp, current_timestamp, 5, 12,3),
+        (6, current_timestamp, current_timestamp, 3, 11,4),
+        (7, current_timestamp, current_timestamp, 1, 99,5);
+
+select * from category;
+select * from product;
+select * from user;
+select * from cart_item;
